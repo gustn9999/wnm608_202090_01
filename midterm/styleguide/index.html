@@ -20,7 +20,30 @@
       </div>
    </header>
 
+   </div>
+      <div class="container">
+      <h2>Color Guide</h2>
+      <div class="grid">
+         <div class="col-3">
+         <div class="colorbox pink"> </div>
+         <p>#ff4096</p>
+         </div>
+         <div class="col-3">
+         <div class="colorbox purple"> </div>
+         <p>#c300f7</p>
+         </div>
+         <div class="col-3">
+         <div class="colorbox blue"> </div>
+         <p>#00cdf7</p>
+         </div>
+         <div class="col-3">
+         <div class="colorbox yellow"></div>
+         <p>#ffdd00</p>
+         </div>
+      </div>
 
+
+   </div>
 
    <div class="container" id="typography">
       <h2>Typography</h2>
@@ -97,7 +120,6 @@
             <h3>Complex Grids</h3>
          </div>
 
-      
          <div class="grid">
             <div class="col-6"><div class="well">Column 6</div></div>
             <div class="col-6"><div class="well">Column 6</div></div>
@@ -105,7 +127,8 @@
             <div class="col-6"><div class="well">Column 6</div></div>
             <div class="col-3"><div class="well">Column 3</div></div>
             <div class="col-12"><div class="well">Column 12</div></div>
-         </div>
+         </div>  
+    
 
         
          <div class="grid">
@@ -265,6 +288,68 @@
    </div>
    </div>
 
+   <div class="container" id="menu">
+      <h2>Menu</h2>
+      <div class="card soft">
+      <div class="grid">
+         <div class="menu-card col-md-6">
+            <img src="images/mojito.jpg" class="menu-card-img" alt="">
+            <div class="menu-text">
+               <h3>Mojito</h3>
+               <p>Description</p>
+            </div>
+
+            
+         </div>
+          <div class="menu-card col-md-6">
+            <img src="images/mojito.jpg" class="menu-card-img" alt="">
+            <div class="menu-text">
+               <h3>Mojito</h3>
+               <p>Description</p>
+            </div>
+
+            
+         </div>
+          <div class="menu-card col-md-6">
+            <img src="images/mojito.jpg" class="menu-card-img" alt="">
+            <div class="menu-text">
+               <h3>Mojito</h3>
+               <p>Description</p>
+            </div>
+
+            
+         </div>
+          <div class="menu-card col-md-6">
+            <img src="images/mojito.jpg" class="menu-card-img" alt="">
+            <div class="menu-text">
+               <h3>Mojito</h3>
+               <p>Description</p>
+            </div>
+
+            
+         </div>
+          <div class="menu-card col-md-6">
+            <img src="images/mojito.jpg" class="menu-card-img" alt="">
+            <div class="menu-text">
+               <h3>Mojito</h3>
+               <p>Description</p>
+            </div>
+
+            
+         </div>
+          <div class="menu-card col-md-6">
+            <img src="images/mojito.jpg" class="menu-card-img" alt="">
+            <div class="menu-text">
+               <h3>Mojito</h3>
+               <p>Description</p>
+            </div>
+
+            
+         </div>
+      </div>
+   </div>
+   </div>
+
    <div class="container" id="button">
       <h2>Button</h2>
       <div class="grid">
@@ -283,7 +368,7 @@
       </div>
 
 
-   </div>
+
 
 
    <div class="container" id="element">
@@ -340,10 +425,138 @@
          <script>makeNav('nav stretch')</script>
       </div>
 
+       <script>
+   const makeTable = (classes='') => {
+      const head = ['ID','Office','Name','Email','Phone'];
+      const body = [
+         ['522',"Hamilton Cline",'hcline@academyart.edu','555-2424'],
+         ['512',"Fred McHale",'fmchale@academyart.edu','555-2424'],
+         ['522',"Michael Catanzaro",'mcatanzaro@academyart.edu','555-2424'],
+         ['514',"Andrea Pimentel",'apimentel@academyart.edu','555-2424'],
+         ['516',"DC Scarpelli",'dscarpelli@academyart.edu','555-2424'],
+      ];
+
+      document.write(`
+      <table class="${classes}">
+         <thead><tr>${head.reduce((r,o)=>r+`<th>${o}</th>`,'')}</tr></thead>
+         <tbody>
+            ${body.reduce((r,o,i)=>r+
+               `<tr>${[i+1,...o].reduce((r,o)=>r+`<td>${o}</td>`,'')}</tr>`
+            ,'')}
+         </tbody>
+      </table>
+      `)
+   }
+   </script>
+   <div class="container" id="tables">
+      <h2>Tables</h2>
+
+      <div class="card soft">
+         <h3>Basic Table</h3>
+
+         <script>makeTable('table')</script>
+      </div>
+
+   
+      
+   </div>
+
+
+      
+   <div class="container">
+      <h2>Forms</h2>
+
+      <div class="card soft">
+         <h3>Basic Input</h3>
+
+         <form>
+            <input type="text" placeholder="Text" class="form-input">
+            <input type="number" placeholder="Number" class="form-input">
+            <input type="search" placeholder="Search" class="form-input">
+            <input type="password" placeholder="Password" class="form-input">
+         </form>
+
+         <h3>Form Label &amp; Control</h3>
+         <form>
+            <div class="form-control">
+               <label for="example-1" class="form-label">Example</label>
+               <input id="example-1" type="text" placeholder="Text" class="form-input">
+            </div>
+            <div class="form-control">
+               <label for="example-2" class="form-label">Example</label>
+               <input id="example-2" type="text" placeholder="Text" class="form-input">
+            </div>
+            <div class="form-control">
+               <label for="example-3" class="form-label">Example</label>
+               <input id="example-3" type="text" placeholder="Text" class="form-input">
+            </div>
+            <div class="display-flex flex-align-center">
+               <div class="flex-none">
+                  <label for="example-search" class="form-label">Search</label>
+               </div>
+               <div class="flex-stretch">
+                  <input id="example-search" type="search" placeholder="Text" class="form-input">
+               </div>
+               <div class="flex-none">
+                  <label for="example-search" class="form-label">Search</label>
+               </div>
+               <div class="flex-stretch">
+                  <input id="example-search" type="search" placeholder="Text" class="form-input">
+               </div>
+            </div>
+         </form>
+
+        
+
+
+         <h3>Select</h3>
+
+         <div class="grid">
+            <div class="col-xs-12 col-md-8">
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fugiat delectus aliquid, voluptatum et, molestias deleniti ad asperiores. Laborum, adipisci. Libero tempora quaerat et quam iusto veritatis, aspernatur aliquid fuga obcaecati enim, nobis quod quidem voluptatibus. Omnis vel sed repellat.</p>
+               <p>Pariatur sit officia incidunt, officiis, dicta nemo debitis rerum asperiores ratione accusantium fugit dolorum. Dolores saepe ducimus dolorum sed rerum molestiae ipsam delectus quae nihil quibusdam. Vel praesentium, magnam id dignissimos necessitatibus repellendus ullam mollitia vitae iusto illo doloremque culpa!</p>
+            </div>
+            <div class="col-xs-12 col-md-4">
+               
+               <div class="form-select">
+                  <select>
+                     <option>Option 1</option>
+                     <option>Option 2</option>
+                     <option>Option 3</option>
+                  </select>
+               </div>
+            </div>
+         </div>
+
+         <h3>Checkbox</h3>
+
+         <div class="form-control">
+            <label> Text
+               <input type="checkbox">
+            </label>
+         </div>
+         <div class="form-control">
+            <input type="checkbox" id="check-example">
+            <label for="check-example">Text</label>
+         </div>
+
+         <!-- Checkbox Trick -->
+         <div class="toggle">
+            <input type="checkbox" id="toggle-1" class="hidden">
+            <label for="toggle-1"></label>
+         </div>
+         <div class="toggle" style="font-size:2em">
+            <input type="checkbox" id="toggle-2" class="hidden">
+            <label for="toggle-2"></label>
+         </div>
+      </div>
+
+   </div>
    
 
       
    </div>
+
    
 </body>
 </html>
