@@ -6,3 +6,4 @@ WNM 608 ADVANCED TECH: BACK END
 - http://jonathanux.com/advertising/index.html
 
 - http://jonathanux.com/midterm/styleguide/index.html
+- http://jonathanux.com/midterm/styleguide/index.php
