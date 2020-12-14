@@ -3,8 +3,11 @@
 include_once "lib/php/functions.php";
 include_once "parts/templates.php";
 
-$cart = MYSQLIQuery("SELECT * FROM products WHERE id in (5,9,13)");
 
+
+$cart = getCartItems();
+
+//print_p($cart);
 
 
 
@@ -20,19 +23,31 @@ $cart = MYSQLIQuery("SELECT * FROM products WHERE id in (5,9,13)");
    <?php include "parts/navbar.php" ?>
 
 
-   <div class="container">
-      <div class="card soft">
-         <h2>Product Cart</h2>
+   <div class="container" style="margin-top:50px;">
+      <div class="grid gap">
+         <div class="col-xs-12 col-md-8">
+            <div class="card soft">
+               <h2>Product Cart</h2>
+               <?
 
-         <?
+               echo array_reduce($cart,'makeCartList');
 
-         echo array_reduce($cart,'makeCartList');
-
-         ?>
-
-         <div><a href="product_checkout.php">Checkout</a></div>
+               ?>
+            </div>
+         </div>
+         <div class="col-xs-12 col-md-4">
+            <div class="card soft total">
+               <div class="card-section">
+                  <h2>Totals</h2>
+               </div>
+               <?= cartTotals() ?>
+            </div>
+         </div>
       </div>
    </div>
 
 </body>
+<footer>
+   <?php include "parts/footer.php"; ?>
+</footer>
 </html>

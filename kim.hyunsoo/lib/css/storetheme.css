@@ -28,10 +28,10 @@ body {
 
 .view-window>h2 {
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background-color: rgba(0,0,0,0.3);
+    background-color: white;
     padding: 1em;
     border-radius: 1em;
     color: white;
@@ -56,11 +56,13 @@ body {
 /* Product List Design */
 .product-item {
     margin: 0;
-    border-radius:0.7em;
-    background-color:white;
-    box-shadow:1px 1px 4px rgba(0,0,0,0.2);
-    padding:1em;
-    transition:all 0.3s;
+    border-radius: 0.7em;
+    background-color: white;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+    padding: 1em;
+    transition: all 0.3s;
+    display: block;
+    height: 100%;
 }
 .product-item:hover {
     box-shadow:1px 1px 12px rgba(0,0,0,0.4);
